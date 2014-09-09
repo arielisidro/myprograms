@@ -60,14 +60,14 @@ class TwoLevelPaging {
 		System.out.println("Address : "+address);
 		String binary = tlp.convert2Binary(address);
 		binary = tlp.padLeft(binary);
-		//System.out.println(binary);
+		System.out.println(binary);
 		String p1=binary.substring(0,12);
 		String p2=binary.substring(12,22);
 		String d=binary.substring(22,32);
 
-		//System.out.println("p1 : "+p1);
-		//System.out.println("p2 : "+p2);
-		//System.out.println(" d : "+d);
+		System.out.println("p1 : "+p1);
+		System.out.println("p2 : "+p2);
+		System.out.println(" d : "+d);
 		System.out.println("p1 : "+tlp.convert2Decimal(p1));
 		System.out.println("p2 : "+tlp.convert2Decimal(p2));
 		System.out.println(" d : "+tlp.convert2Decimal(d));
