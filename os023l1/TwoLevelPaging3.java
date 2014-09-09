@@ -8,17 +8,17 @@ import java.util.Scanner;
 
 class TwoLevelPaging3 {
 
-	int inputAddress(String msg){
+	long inputAddress(String msg){
 
 		Scanner sc=new Scanner(System.in);
 		System.out.print(msg);
-		int address = sc.nextInt();
+		long address = sc.nextLong();
 
 		return address;
 	}
 
-	int computeAddress(int address,int shift,int mask){
-		int a= address >> shift;
+	long computeAddress(long address,int shift,int mask){
+		long a= address >> shift;
 		a &= mask;
 		return a;
 	}	
@@ -27,14 +27,14 @@ class TwoLevelPaging3 {
 	public static void main(String[] args){
 
 		TwoLevelPaging3 tlp=new TwoLevelPaging3();
-		int address=tlp.inputAddress("Please input logical address: ");
+		long address=tlp.inputAddress("Please input logical address: ");
 		int dmask  = 0b1111111111;
 		int p2mask = 0b1111111111;
 		int p1mask = 0b111111111111;
 
-		int p1=tlp.computeAddress(address,20,p1mask);
-		int p2=tlp.computeAddress(address,10,p2mask);
-		int d =tlp.computeAddress(address,0,dmask);
+		long p1=tlp.computeAddress(address,20,p1mask);
+		long p2=tlp.computeAddress(address,10,p2mask);
+		long d =tlp.computeAddress(address,0,dmask);
 
 		System.out.println("Address : "+address);
 
