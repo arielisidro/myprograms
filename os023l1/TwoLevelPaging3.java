@@ -6,38 +6,41 @@ Description : Two-level paging using masking
 *************************/
 import java.util.Scanner;
 
-class TwoLevelPaging2 {
+class TwoLevelPaging3 {
 
-	long inputAddress(String msg){
+	int inputAddress(String msg){
 
 		Scanner sc=new Scanner(System.in);
 		System.out.print(msg);
-		long address = sc.nextLong();
+		int address = sc.nextInt();
 
 		return address;
 	}
 
+	int computeAddress(int address,int shift,int mask){
+		int a= address >> shift;
+		a &= mask;
+		return a;
+	}	
+	
+
 	public static void main(String[] args){
 
-		TwoLevelPaging2 tlp=new TwoLevelPaging2();
-		long address=tlp.inputAddress("Please input logical address: ");
+		TwoLevelPaging3 tlp=new TwoLevelPaging3();
+		int address=tlp.inputAddress("Please input logical address: ");
 		int dmask  = 0b1111111111;
 		int p2mask = 0b1111111111;
 		int p1mask = 0b111111111111;
 
-		long d = address & dmask;
+		int p1=tlp.computeAddress(address,20,p1mask);
+		int p2=tlp.computeAddress(address,10,p2mask);
+		int d =tlp.computeAddress(address,0,dmask);
 
-		long p2=address >> 10;
-		p2=p2 & p2mask;
-
-		long p1=address >> 20;
-			
 		System.out.println("Address : "+address);
 
 		System.out.println("p1 : "+p1);
 		System.out.println("p2 : "+p2);
 		System.out.println(" d : "+d);
-
 
 	}
 }
