@@ -8,7 +8,7 @@ package exception;
 
 /**
  *
- * @author EDSA
+ * @author Ariel
  */
 import java.util.Scanner;
 
