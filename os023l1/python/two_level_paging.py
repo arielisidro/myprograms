@@ -17,12 +17,11 @@ def convert_to_binary(number):
 def convert_to_decimal(s):
 
     d = 0
-    l = len(s)
     y = 0
-    i = l
-    while i > 0:
+    i = len(s)
+    for i in range(len(s),0,-1):
 
-        d += int(s[i-1:1]) * 2**y
+        d += int(s[i-1:i]) * (2**y)
         y += 1
 
     return d
