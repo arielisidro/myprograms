@@ -10,9 +10,9 @@ package SkillsTest;
  */
 public class TemperatureConversion {
     
-    private double inputTemperature(String msg) {
+    private static double inputTemperature(String msg) {
         
-        return t;
+        return 0;
     }
     
     private double computeFahrenheit(double celsius) {
