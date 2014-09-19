@@ -3,7 +3,7 @@ __author__ = 'ariel'
 
 def convert_to_binary(number):
 
-    print ("number: ",number)
+    print ("number: ", number)
     b = ""
     while number > 0:
         b = str(number % 2) + b
@@ -19,7 +19,7 @@ def convert_to_decimal(s):
     d = 0
     y = 0
     i = len(s)
-    for i in range(len(s),0,-1):
+    for i in range(len(s), 0, -1):
 
         d += int(s[i-1:i]) * (2**y)
         y += 1
