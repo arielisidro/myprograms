@@ -1,0 +1,5 @@
+t1 TITLE Obama
+t2 SUBJECT Romney
+t3 PHRASE Election
+t4 OR t2 t3
+ADD t1 t4

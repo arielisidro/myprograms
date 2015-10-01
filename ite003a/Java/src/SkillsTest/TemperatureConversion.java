@@ -4,15 +4,11 @@
 
 package SkillsTest;
 
-/**
- *
- * @author EDSA
- */
 public class TemperatureConversion {
     
     private static double inputTemperature(String msg) {
         
-        return 0;
+        return t;
     }
     
     private double computeFahrenheit(double celsius) {
